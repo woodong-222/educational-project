@@ -31,22 +31,50 @@ header nav ul li a {
     font-size: 18px;
 }
 
-.login-button {
-    display: inline-block;
-    padding: 10px 20px;
+.index-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
     background: #ffffff;
     color: rgb(0, 0, 0);
-    border: none;
+    border: 2px solid #ccc;
     border-radius: 5px;
-    text-decoration: none;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.1s;
 }
 
-.login-button:hover {
+.index-button:hover {
     background: #a5a5a5;
+    transform: scale(1.03);
+}
+
+main {
+    padding: 20px;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    background: white;
+    margin: 10px auto;
+    padding: 0;
+    width: 50%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+main ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
 .login-container {
@@ -84,35 +112,4 @@ header nav ul li a {
 
 .login-container button:hover {
     background: #0056b3;
-}
-
-/* 반응형 스타일 */
-@media screen and (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    /* 로그인 페이지 간격 조정 */
-    .login-container {
-        width: 95%;
-        margin-top: 5vh;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header nav ul li a {
-        font-size: 16px;
-    }
-
-    .login-container {
-        padding: 15px;
-    }
-
-    .login-container button {
-        font-size: 14px;
-    }
 }
